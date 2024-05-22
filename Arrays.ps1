@@ -30,4 +30,20 @@ $a[4..7]
 $a[-1]
 
 # Negative number range, Use index ascending order
+$a[-4..-1]
 
+# Change the value of an array element
+$a[3] = 99
+
+$a.SetValue(10,3)
+
+# Add element using +- (creates new array, performance)
+$a+=127
+
+# Get the number of elements in an array
+$a.Length
+
+# Start a VM
+$vms = Get-VM 
+$vms
+$vms[6] | Start-vm
