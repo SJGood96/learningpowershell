@@ -31,3 +31,13 @@ $svcInfo.Search | Stop-Service
 
 # Creat ab irdered dictionary
 $ip.Add('svr03', 10.10.0.103)
+
+$ip = [ordered]@(svr01='10.10.0.201'; svr02= '10.10.0.202')
+$ip.add('svr03', '10.10.0.203')
+
+# Convert array to hash table
+$vmhash = $null
+$vmhash = [ordered]@{}
+foreach ($vm in $vmlist){
+    $vmhash.Add($vm.Name, $vm.Notes)
+}
